@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><img src="images/logo.png" alt="Logo"></div>
+            <div class="home"><a href="index.html">Home</a></div>
+        </div>
+    </nav>
+    <header-multimedia>
+        <div class="choose-multimedia">
+            <button onclick="document.getElementById('fileInput').click()">Pilih Gambar</button>
+            <!-- Input type file tersembunyi -->
+            <input type="file" accept="image/*" id="fileInput" style="display: none;" onchange="previewImage(event)">
+            <img id="imagePreview" src="#" alt="Preview" style="display: none; max-width: 100%; height: auto;">
+        </div>
+        <div class="menu-action">
+            <button id="resizeButton" onclick="resizeImage()">Resize</button>
+            <button id="grayscaleButton" onclick="grayscaleImage()">Grayscale</button>
+            <button id="blurButton" onclick="blurImage()">Blur</button>
+            <button id="saveButton" onclick="saveButton()">Save Image</button>
+        </div>
+    </header-multimedia>
+    <canvas id="outputCanvas"></canvas>
+    <script src="scriptimg.js"></script>
+</body>
+</html>
